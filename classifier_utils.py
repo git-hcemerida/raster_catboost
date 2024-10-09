@@ -32,7 +32,7 @@ def select_final_features(df):
         np.array: DataFrame containing the final features
 
     """
-    col_idx = [11, 18, 21, 24, 49, 51, 55, 57, 60, 64, 70, 75, 76, 77, 78]
+    col_idx = [0, 4, 9, 14, 18, 51, 55, 57, 58, 60, 61, 64, 72, 77, 78]
     newdf = df[:, col_idx]
     return newdf
 

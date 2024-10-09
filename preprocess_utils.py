@@ -53,13 +53,13 @@ def clip_raster_with_vector(
             "height": out_image.shape[1],
             "width": out_image.shape[2],
             "transform": out_transform,
-            "dtype": rasterio.float64,
+            "dtype": rasterio.float32,
             "compress": "lzw"
         }
     )
     # Save
     with rasterio.open(output_raster_path, "w", **out_meta) as dest:
-        dest.write(out_image.astype(rasterio.float64))
+        dest.write(out_image.astype(rasterio.float32))
 
 
 def convert_raster_to_array(raster_path):
